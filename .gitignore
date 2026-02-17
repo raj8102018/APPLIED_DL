@@ -27,3 +27,6 @@ wheels/
 venv/
 env/
 .venv/
+
+#ignore cursor rules
+.cursor
