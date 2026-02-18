@@ -31,7 +31,6 @@ class MultiHeadAttention(nn.Module):
         self.W_o = nn.Linear(d_model,d_model)
         self.attention = ScaledDotProductAttention(num_heads)
 
-
     
     def split_heads(self,X):
         #Assuming the input format for Q,K,V to be [batch, sequence_len, d_model]
