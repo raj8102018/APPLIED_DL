@@ -30,3 +30,6 @@ env/
 
 #ignore cursor rules
 .cursor
+
+#ignore irrelevant files
+# resume.pdf
