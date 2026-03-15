@@ -13,7 +13,7 @@ class BERTEmbeddings(nn.Module):
         self.customlayernorm = CustomLayerNorm(hidden_size)
         self.dropout = nn.Dropout(p=0.1)        
 
-    def forward(self, input_ids: torch.Tensor, segment_ids: torch.Tensor):
+    def forward(self, input_ids: torch.Tensor, segment_ids: torch.Tensor) -> torch.Tensor:
         seq_len = input_ids.shape[1]
         position_ids = torch.arange(seq_len).unsqueeze(0).to(input_ids.device)
         input_representation = self.token_embedding(input_ids)+self.position_embedding(position_ids)+self.segment_embedding(segment_ids)
@@ -31,7 +31,7 @@ class BERT(nn.Module):
         self.pooler = nn.Linear(hidden_size,hidden_size)
         self.pooler_act = nn.Tanh()
 
-    def forward(self, input_ids: torch.Tensor, segment_ids: torch.Tensor, attention_mask: torch.Tensor):
+    def forward(self, input_ids: torch.Tensor, segment_ids: torch.Tensor, attention_mask: torch.Tensor) -> tuple[torch.Tensor, torch.Tensor]:
         embeddings_output = self.embeddings(input_ids, segment_ids)
         hidden_states = embeddings_output
         for layer in self.encoder_stack:
@@ -44,7 +44,7 @@ class BERT(nn.Module):
 
 class BERTPreTrainingHeads(nn.Module):
     
-    def __init__(self, hidden_size: int, vocab_size: int):
+    def __init__(self, hidden_size: int, vocab_size: int) -> None:
         super().__init__()
         self.mlm_head = nn.Sequential(
             nn.Linear(hidden_size,hidden_size),
@@ -53,7 +53,7 @@ class BERTPreTrainingHeads(nn.Module):
             nn.Linear(hidden_size, vocab_size)
         )
         self.nsp_head = nn.Linear(hidden_size,2)
-    def forward(self, sequence_output, pooled_output):
+    def forward(self, sequence_output: torch.Tensor, pooled_output: torch.Tensor) -> tuple[torch.Tensor, torch.Tensor]:
 
         mlm_head_output = self.mlm_head(sequence_output)
         nsp_head_output = self.nsp_head(pooled_output)
