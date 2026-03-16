@@ -1,5 +1,6 @@
 import torch
 import torch.nn as nn
+import torch.nn.functional as F
 from layernorm import CustomLayerNorm
 from attention import MultiHeadAttention
 import math
@@ -46,6 +47,7 @@ class GPT(nn.Module):
 
     def __init__(self, vocab_size: int, hidden_size: int, max_positions: int, num_layers: int, num_heads: int, d_ff: int, dropout: float = 0.1) -> None:
         super().__init__()
+        self.max_positions = max_positions
         self.embeddings = GPTEmbeddings(vocab_size, hidden_size, max_positions)
         self.decoder_stack = nn.ModuleList([GPTDecoderBlock(hidden_size, num_heads, d_ff, dropout) for _ in range(num_layers)])
         self.layernorm = CustomLayerNorm(hidden_size)
@@ -81,5 +83,31 @@ class GPT(nn.Module):
 
 
     def generate(self, idx: torch.Tensor, max_new_tokens: int, temperature: float = 1.0, top_k: int = None) -> torch.Tensor:
+
+        for _ in range(max_new_tokens):
+            max_positions = self.max_positions
+            if idx.shape[1] > max_positions:
+                idx_stripped = idx[:, -max_positions:]
+            else:
+                idx_stripped = idx
+            logits = self(idx_stripped)
+            logits = logits[:, -1, :]
+            logits = logits/temperature
+
+            if top_k is not None:
+                values, indices = torch.topk(logits, top_k)
+                smallest_topk = values[:, -1].unsqueeze(1)
+                logits[logits < smallest_topk] = float('-inf')
+
+            outputs = F.softmax(logits, dim=-1)
+
+            next_token = torch.multinomial(outputs, num_samples=1)
+
+            idx = torch.cat((idx, next_token), dim=1)
+        
+        return idx
+                            
+
+
         
 
