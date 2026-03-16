@@ -2,6 +2,7 @@ import torch
 import torch.nn as nn
 from layernorm import CustomLayerNorm
 from attention import MultiHeadAttention
+import math
 
 class GPTEmbeddings(nn.Module):
     def __init__(self, vocab_size: int, hidden_size: int, max_positions: int = 512) -> None:
@@ -68,5 +69,17 @@ class GPT(nn.Module):
 
     def _init_weights(self, module: nn.Module) -> None:
 
+        if isinstance(module, (nn.Linear, nn.Embedding)):
+            std = 0.02
+            if hasattr(module, "IS_RESIDUAL_PROJECTION") and module.IS_RESIDUAL_PROJECTION:
+                std = 0.02/math.sqrt(2 * self.num_layers)
+            nn.init.normal_(module.weight, mean=0.0, std=std)
+        
+        if isinstance(module, nn.Linear) and module.bias is not None:
+            nn.init.zeros_(module.bias)
+
+
+
     def generate(self, idx: torch.Tensor, max_new_tokens: int, temperature: float = 1.0, top_k: int = None) -> torch.Tensor:
+        
 
