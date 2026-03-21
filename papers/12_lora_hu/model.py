@@ -10,8 +10,8 @@ class LoRALinear(nn.Module):
 
         self.original_layer = original_layer
 
-        for l in original_layer.parameters():
-            l.requires_grad = False
+        for param in original_layer.parameters():
+            param.requires_grad = False
         
         in_features = original_layer.in_features
         out_features = original_layer.out_features
