@@ -26,7 +26,7 @@ class SwitchMoELayer(nn.Module):
 
         self.router = nn.Linear(hidden_size, num_experts, bias=False)
 
-        self.experts = nn.ModuleList([ExpertBlock(hidden_size, d_ff) for _ in range(N)])
+        self.experts = nn.ModuleList([ExpertBlock(hidden_size, intermediate_size) for _ in range(num_experts)])
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
 
@@ -34,13 +34,31 @@ class SwitchMoELayer(nn.Module):
 
         router_out = self.router(flattend_input)
 
-        router_probs = F.softmax(x, dim=-1)
+        router_probs = F.softmax(router_out, dim=-1)
 
         routing_weight, expert_id = router_probs.max(dim=-1)
 
         new_tensor = torch.zeros_like(flattend_input)
 
-        for expert in self.experts:
+        for i, expert in enumerate(self.experts):
+
+            mask = (expert_id == i)
+
+            locations = torch.nonzero(mask).flatten()
+
+            tokens = flattend_input[locations]
+
+            expert_out = expert(tokens)
+
+            scaled_out = expert_out * routing_weight[locations].unsqueeze(1)
+
+            new_tensor[locations] = scaled_out
+        
+        return new_tensor.view(x.shape)
+
+
+
+
 
             
 
