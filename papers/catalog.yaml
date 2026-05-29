@@ -1,0 +1,357 @@
+version: 1
+
+domains:
+  foundations: "Deep Learning Foundations"
+  llm_alignment: "The LLM Scaling & Alignment Era"
+  architecture_retrieval: "Modern Architecture & Retrieval"
+  systems_inference: "Inference, Serving & Systems"
+  quantization_peft: "Quantization & Parameter-Efficient Fine-Tuning"
+  vision_ssl: "Modern Vision & Self-Supervised Learning"
+  reinforcement_learning: "Deep Reinforcement Learning"
+  generative_philosophy: "Advanced Generative & AI Philosophy"
+
+status_legend:
+  implemented: "Folder exists with code and notes."
+  notes_only: "Folder exists with notes only."
+  planned: "On the roadmap but not yet present in the repository."
+
+type_legend:
+  implementation: "Expected to include a code implementation."
+  read_only: "Study-only paper with no implementation planned."
+
+papers:
+  - id: 1
+    title: "Auto-Encoding Variational Bayes"
+    domain: foundations
+    status: implemented
+    type: implementation
+    folder: "01_vae_kingma"
+
+  - id: 2
+    title: "Generative Adversarial Nets"
+    domain: foundations
+    status: implemented
+    type: implementation
+    folder: "02_gan_goodfellow"
+
+  - id: 3
+    title: "Attention is All You Need"
+    domain: foundations
+    status: implemented
+    type: implementation
+    folder: "03_transformer_vaswani"
+
+  - id: 4
+    title: "ADAM: A Method for Stochastic Optimization"
+    domain: foundations
+    status: implemented
+    type: implementation
+    folder: "04_adam_kingma"
+
+  - id: 5
+    title: "Layer Normalization"
+    domain: foundations
+    status: implemented
+    type: implementation
+    folder: "05_layernorm_ba"
+
+  - id: 6
+    title: "Deep Residual Learning for Image Recognition"
+    domain: foundations
+    status: implemented
+    type: implementation
+    folder: "06_resnet_he"
+
+  - id: 7
+    title: "ImageNet Classification with Deep Convolutional Neural Networks"
+    domain: foundations
+    status: implemented
+    type: implementation
+    folder: "07_alexnet_krizhevsky"
+
+  - id: 8
+    title: "BERT: Pre-training of Deep Bidirectional Transformers"
+    domain: llm_alignment
+    status: implemented
+    type: implementation
+    folder: "08_bert_devlin"
+
+  - id: 9
+    title: "Improving Language Understanding by Generative Pre-Training"
+    domain: llm_alignment
+    status: implemented
+    type: implementation
+    folder: "09_gpt1_radford"
+
+  - id: 10
+    title: "Language Models are Unsupervised Multitask Learners"
+    domain: llm_alignment
+    status: implemented
+    type: implementation
+    folder: "10_gpt2_radford"
+
+  - id: 11
+    title: "Language Models are Few-Shot Learners"
+    domain: llm_alignment
+    status: implemented
+    type: implementation
+    folder: "11_gpt3_brown"
+
+  - id: 12
+    title: "LoRA: Low-Rank Adaptation of Large Language Models"
+    domain: quantization_peft
+    status: implemented
+    type: implementation
+    folder: "12_lora_hu"
+
+  - id: 13
+    title: "Scaling Laws for Neural Language Models"
+    domain: llm_alignment
+    status: notes_only
+    type: read_only
+    folder: "13_scalinglaws_kaplan"
+
+  - id: 14
+    title: "InstructGPT / Training Language Models to Follow Instructions"
+    domain: llm_alignment
+    status: implemented
+    type: implementation
+    folder: "14_instructgpt_ouyang"
+
+  - id: 15
+    title: "Reinforcement Learning from Human Feedback"
+    domain: llm_alignment
+    status: planned
+    type: implementation
+    folder:
+
+  - id: 16
+    title: "Self-Instruct: Aligning Language Models with Self-Generated Instructions"
+    domain: llm_alignment
+    status: notes_only
+    type: read_only
+    folder: "16_selfinstruct_wang"
+
+  - id: 17
+    title: "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks"
+    domain: architecture_retrieval
+    status: implemented
+    type: implementation
+    folder: "17_rag_lewis"
+
+  - id: 18
+    title: "REALM: Retrieval-Augmented Language Model Pre-Training"
+    domain: architecture_retrieval
+    status: implemented
+    type: implementation
+    folder: "18_realm_guu"
+
+  - id: 19
+    title: "Training Compute-Optimal Large Language Models"
+    domain: llm_alignment
+    status: notes_only
+    type: read_only
+    folder: "19_chinchilla_hoffman"
+
+  - id: 20
+    title: "LLaMA: Open and Efficient Foundation Models"
+    domain: architecture_retrieval
+    status: implemented
+    type: implementation
+    folder: "20_llama_touvron"
+
+  - id: 21
+    title: "PaLM: Pathways Language Model"
+    domain: architecture_retrieval
+    status: planned
+    type: implementation
+    folder:
+
+  - id: 22
+    title: "Switch Transformers: Scaling to Trillion Parameter Models"
+    domain: architecture_retrieval
+    status: implemented
+    type: implementation
+    folder: "22_switch_fedus"
+
+  - id: 23
+    title: "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness"
+    domain: architecture_retrieval
+    status: implemented
+    type: implementation
+    folder: "23_flashattention_dao"
+
+  - id: 24
+    title: "FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning"
+    domain: architecture_retrieval
+    status: notes_only
+    type: read_only
+    folder: "24_flashattention2"
+
+  - id: 25
+    title: "Efficient Memory Management for Large Language Model Serving with PagedAttention"
+    domain: systems_inference
+    status: notes_only
+    type: read_only
+    folder: "25_pagedattention_kwon"
+
+  - id: 26
+    title: "Fast Inference from Transformers via Speculative Decoding"
+    domain: systems_inference
+    status: planned
+    type: implementation
+    folder:
+
+  - id: 27
+    title: "ZeRO: Memory Optimizations Toward Training Trillion Parameter Models"
+    domain: systems_inference
+    status: planned
+    type: read_only
+    folder:
+
+  - id: 28
+    title: "AdaLoRA: Adaptive Budget Allocation for Parameter-Efficient Fine-Tuning"
+    domain: quantization_peft
+    status: planned
+    type: implementation
+    folder:
+
+  - id: 29
+    title: "Parameter-Efficient Fine-Tuning Methods: A Critical Review"
+    domain: quantization_peft
+    status: planned
+    type: read_only
+    folder:
+
+  - id: 30
+    title: "LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale"
+    domain: quantization_peft
+    status: planned
+    type: implementation
+    folder:
+
+  - id: 31
+    title: "Decoupled Weight Decay Regularization"
+    domain: foundations
+    status: planned
+    type: implementation
+    folder:
+
+  - id: 32
+    title: "GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers"
+    domain: quantization_peft
+    status: planned
+    type: implementation
+    folder:
+
+  - id: 33
+    title: "AWQ: Activation-Aware Weight Quantization for LLMs"
+    domain: quantization_peft
+    status: planned
+    type: implementation
+    folder:
+
+  - id: 34
+    title: "Holistic Evaluation of Language Models"
+    domain: generative_philosophy
+    status: planned
+    type: read_only
+    folder:
+
+  - id: 35
+    title: "Interpretable Machine Learning: Principles & Grand Challenges"
+    domain: generative_philosophy
+    status: planned
+    type: read_only
+    folder:
+
+  - id: 36
+    title: "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale"
+    domain: vision_ssl
+    status: planned
+    type: implementation
+    folder:
+
+  - id: 37
+    title: "A Simple Framework for Contrastive Learning of Visual Representations"
+    domain: vision_ssl
+    status: planned
+    type: implementation
+    folder:
+
+  - id: 38
+    title: "Momentum Contrast for Unsupervised Visual Representation Learning"
+    domain: vision_ssl
+    status: planned
+    type: implementation
+    folder:
+
+  - id: 39
+    title: "Self-Supervised Models are Continual Learners"
+    domain: vision_ssl
+    status: planned
+    type: read_only
+    folder:
+
+  - id: 40
+    title: "Denoising Diffusion Probabilistic Models"
+    domain: generative_philosophy
+    status: planned
+    type: implementation
+    folder:
+
+  - id: 41
+    title: "High-Resolution Image Synthesis with Latent Diffusion Models"
+    domain: generative_philosophy
+    status: planned
+    type: implementation
+    folder:
+
+  - id: 42
+    title: "Proximal Policy Optimization Algorithms"
+    domain: reinforcement_learning
+    status: implemented
+    type: implementation
+    folder: "43_ppo_schulman"
+
+  - id: 43
+    title: "Soft Actor-Critic: Off-Policy Maximum Entropy Reinforcement Learning"
+    domain: reinforcement_learning
+    status: planned
+    type: implementation
+    folder:
+
+  - id: 44
+    title: "Addressing Function Approximation Error in Actor-Critic Methods"
+    domain: reinforcement_learning
+    status: planned
+    type: implementation
+    folder:
+
+  - id: 45
+    title: "A Survey on Generative Adversarial Networks: Variants & Training"
+    domain: generative_philosophy
+    status: planned
+    type: read_only
+    folder:
+
+  - id: 46
+    title: "Deep Generative Modelling: A Comparative Review"
+    domain: generative_philosophy
+    status: planned
+    type: read_only
+    folder:
+
+  - id: 47
+    title: "BAYPRANOMETA: Bayesian Proto-MAML for Few-Shot Industrial Image Anomaly Detection"
+    domain: vision_ssl
+    status: planned
+    type: implementation
+    folder:
+
+  - id: 48
+    title: "The Bitter Lesson"
+    domain: generative_philosophy
+    status: planned
+    type: read_only
+    folder:
