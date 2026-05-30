@@ -25,98 +25,98 @@ papers:
     domain: foundations
     status: implemented
     type: implementation
-    folder: "01_vae_kingma"
+    folder: "p01_vae_kingma"
 
   - id: 2
     title: "Generative Adversarial Nets"
     domain: foundations
     status: implemented
     type: implementation
-    folder: "02_gan_goodfellow"
+    folder: "p02_gan_goodfellow"
 
   - id: 3
     title: "Attention is All You Need"
     domain: foundations
     status: implemented
     type: implementation
-    folder: "03_transformer_vaswani"
+    folder: "p03_transformer_vaswani"
 
   - id: 4
     title: "ADAM: A Method for Stochastic Optimization"
     domain: foundations
     status: implemented
     type: implementation
-    folder: "04_adam_kingma"
+    folder: "p04_adam_kingma"
 
   - id: 5
     title: "Layer Normalization"
     domain: foundations
     status: implemented
     type: implementation
-    folder: "05_layernorm_ba"
+    folder: "p05_layernorm_ba"
 
   - id: 6
     title: "Deep Residual Learning for Image Recognition"
     domain: foundations
     status: implemented
     type: implementation
-    folder: "06_resnet_he"
+    folder: "p06_resnet_he"
 
   - id: 7
     title: "ImageNet Classification with Deep Convolutional Neural Networks"
     domain: foundations
     status: implemented
     type: implementation
-    folder: "07_alexnet_krizhevsky"
+    folder: "p07_alexnet_krizhevsky"
 
   - id: 8
     title: "BERT: Pre-training of Deep Bidirectional Transformers"
     domain: llm_alignment
     status: implemented
     type: implementation
-    folder: "08_bert_devlin"
+    folder: "p08_bert_devlin"
 
   - id: 9
     title: "Improving Language Understanding by Generative Pre-Training"
     domain: llm_alignment
     status: implemented
     type: implementation
-    folder: "09_gpt1_radford"
+    folder: "p09_gpt1_radford"
 
   - id: 10
     title: "Language Models are Unsupervised Multitask Learners"
     domain: llm_alignment
     status: implemented
     type: implementation
-    folder: "10_gpt2_radford"
+    folder: "p10_gpt2_radford"
 
   - id: 11
     title: "Language Models are Few-Shot Learners"
     domain: llm_alignment
     status: implemented
     type: implementation
-    folder: "11_gpt3_brown"
+    folder: "p11_gpt3_brown"
 
   - id: 12
     title: "LoRA: Low-Rank Adaptation of Large Language Models"
     domain: quantization_peft
     status: implemented
     type: implementation
-    folder: "12_lora_hu"
+    folder: "p12_lora_hu"
 
   - id: 13
     title: "Scaling Laws for Neural Language Models"
     domain: llm_alignment
     status: notes_only
     type: read_only
-    folder: "13_scalinglaws_kaplan"
+    folder: "p13_scalinglaws_kaplan"
 
   - id: 14
     title: "InstructGPT / Training Language Models to Follow Instructions"
     domain: llm_alignment
     status: implemented
     type: implementation
-    folder: "14_instructgpt_ouyang"
+    folder: "p14_instructgpt_ouyang"
 
   - id: 15
     title: "Reinforcement Learning from Human Feedback"
@@ -130,35 +130,35 @@ papers:
     domain: llm_alignment
     status: notes_only
     type: read_only
-    folder: "16_selfinstruct_wang"
+    folder: "p16_selfinstruct_wang"
 
   - id: 17
     title: "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks"
     domain: architecture_retrieval
     status: implemented
     type: implementation
-    folder: "17_rag_lewis"
+    folder: "p17_rag_lewis"
 
   - id: 18
     title: "REALM: Retrieval-Augmented Language Model Pre-Training"
     domain: architecture_retrieval
     status: implemented
     type: implementation
-    folder: "18_realm_guu"
+    folder: "p18_realm_guu"
 
   - id: 19
     title: "Training Compute-Optimal Large Language Models"
     domain: llm_alignment
     status: notes_only
     type: read_only
-    folder: "19_chinchilla_hoffman"
+    folder: "p19_chinchilla_hoffman"
 
   - id: 20
     title: "LLaMA: Open and Efficient Foundation Models"
     domain: architecture_retrieval
     status: implemented
     type: implementation
-    folder: "20_llama_touvron"
+    folder: "p20_llama_touvron"
 
   - id: 21
     title: "PaLM: Pathways Language Model"
@@ -172,28 +172,28 @@ papers:
     domain: architecture_retrieval
     status: implemented
     type: implementation
-    folder: "22_switch_fedus"
+    folder: "p22_switch_fedus"
 
   - id: 23
     title: "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness"
     domain: architecture_retrieval
     status: implemented
     type: implementation
-    folder: "23_flashattention_dao"
+    folder: "p23_flashattention_dao"
 
   - id: 24
     title: "FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning"
     domain: architecture_retrieval
     status: notes_only
     type: read_only
-    folder: "24_flashattention2"
+    folder: "p24_flashattention2"
 
   - id: 25
     title: "Efficient Memory Management for Large Language Model Serving with PagedAttention"
     domain: systems_inference
     status: notes_only
     type: read_only
-    folder: "25_pagedattention_kwon"
+    folder: "p25_pagedattention_kwon"
 
   - id: 26
     title: "Fast Inference from Transformers via Speculative Decoding"
@@ -312,7 +312,7 @@ papers:
     domain: reinforcement_learning
     status: implemented
     type: implementation
-    folder: "43_ppo_schulman"
+    folder: "p42_ppo_schulman"
 
   - id: 43
     title: "Soft Actor-Critic: Off-Policy Maximum Entropy Reinforcement Learning"
