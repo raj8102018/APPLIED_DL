@@ -1,5 +1,5 @@
 import torch
-from model import GPT
+from .model import GPT
 
 # Hyperparameters
 BATCH_SIZE = 4

@@ -1,8 +1,8 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from layernorm import CustomLayerNorm
-from attention import MultiHeadAttention
+from shared_utils.layernorm import CustomLayerNorm
+from shared_utils.attention import MultiHeadAttention
 import math
 
 class GPTEmbeddings(nn.Module):

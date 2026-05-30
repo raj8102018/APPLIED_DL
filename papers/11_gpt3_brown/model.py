@@ -3,8 +3,8 @@ import torch.nn as nn
 import torch.nn.functional as F
 import math
 from typing import Optional, Tuple, List
-from attention import ScaledDotProductAttention
-from layernorm import CustomLayerNorm
+from shared_utils.attention import ScaledDotProductAttention
+from shared_utils.layernorm import CustomLayerNorm
 
 
 class KVCacheAttention(nn.Module):

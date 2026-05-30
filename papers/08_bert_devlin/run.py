@@ -1,5 +1,5 @@
 import torch
-from model import BERT, BERTPreTrainingHeads
+from .model import BERT, BERTPreTrainingHeads
 
 # Hyperparameters
 BATCH_SIZE = 8

@@ -3,9 +3,8 @@ import torch.nn as nn
 import math
 
 class ScaledDotProductAttention(nn.Module):
-    def __init__(self, d_k: int) -> None:
+    def __init__(self) -> None:
         super().__init__()
-        self.d_k = d_k
     
     def forward(self, Q: torch.Tensor, K: torch.Tensor, V: torch.Tensor, mask: torch.Tensor = None) -> torch.Tensor:
         
@@ -30,7 +29,7 @@ class MultiHeadAttention(nn.Module):
         self.W_k = nn.Linear(d_model,d_model)               
         self.W_v = nn.Linear(d_model,d_model)               
         self.W_o = nn.Linear(d_model,d_model)
-        self.attention = ScaledDotProductAttention(num_heads)
+        self.attention = ScaledDotProductAttention()
 
     
     def split_heads(self, X: torch.Tensor) -> torch.Tensor:

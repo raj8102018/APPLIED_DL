@@ -1,5 +1,5 @@
 import torch
-from model import KVCacheAttention, GPT
+from .model import KVCacheAttention, GPT
 
 # ==========================================
 # TEST 1: The Attention Equivalence Proof

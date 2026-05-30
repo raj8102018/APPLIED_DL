@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
-from layernorm import CustomLayerNorm
-from encoder import EncoderBlock
+from shared_utils.layernorm import CustomLayerNorm
+from .encoder import EncoderBlock
 
 class BERTEmbeddings(nn.Module):
 

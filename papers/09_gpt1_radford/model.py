@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
-from layernorm import CustomLayerNorm
-from attention import MultiHeadAttention
+from shared_utils.layernorm import CustomLayerNorm
+from shared_utils.attention import MultiHeadAttention
 
 class GPTEmbeddings(nn.Module):
     def __init__(self, vocab_size: int, hidden_size: int, max_positions: int = 512) -> None:

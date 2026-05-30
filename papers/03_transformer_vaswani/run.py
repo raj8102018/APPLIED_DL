@@ -8,7 +8,7 @@ K =torch.tensor([[[[1, 0],
 V =torch.tensor([[[[10, 0],
    [0, 20]]]],dtype=torch.float32)
 
-value = ScaledDotProductAttention(2)
+value = ScaledDotProductAttention()
 value=value.forward(Q,K,V)
 print(value)
 

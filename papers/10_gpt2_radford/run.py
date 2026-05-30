@@ -1,7 +1,7 @@
 import torch
 import torch.nn.functional as F
 # Import your updated GPT model from wherever you saved it
-from model import GPT 
+from .model import GPT 
 
 # Hyperparameters
 VOCAB_SIZE = 50257 # GPT-2's BPE vocab size
