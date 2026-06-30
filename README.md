@@ -1,14 +1,14 @@
 # Deep Learning Architecture & Systems: A Code-First Study
 
-This repository is a self-directed, code-first study of 48 foundational papers in Deep Learning, Large Language Models (LLMs), and AI Systems.
+This repository is a self-directed, code-first study of 49 foundational papers in Deep Learning, Large Language Models (LLMs), and AI Systems.
 
 The objective is to bridge the gap between theoretical understanding and systems engineering by building the mathematical and architectural backbone of modern AI from scratch, primarily using pure PyTorch.
 
 ## 📊 Current Repository Status
-* **Paper Map Total:** 48 Papers
-* **Current Repo Snapshot:** 24 Paper Folders
+* **Paper Map Total:** 49 Papers
+* **Current Repo Snapshot:** 26 Paper Folders
 * **PyTorch Implementations:** 19 Folders
-* **Systems/Theory Notes:** 5 Folders
+* **Systems/Theory Notes:** 7 Folders
 
 **Legend:**
 * `[✓]` **Implemented:** Core architecture implemented in PyTorch (`model.py`), verification scripts (`run.py`), and study notes (`notes.pdf`).
@@ -52,12 +52,13 @@ The objective is to bridge the gap between theoretical understanding and systems
 * `[ ]` PaLM: Pathways Language Model 
 
 ### Domain 4: Inference, Serving & Systems
-* `[ ]` Fast Inference from Transformers via Speculative Decoding 📍 *(Next Up)*
+* `[📝]` Fast Inference from Transformers via Speculative Decoding
 * `[📝]` Efficient Memory Management for LLM Serving with PagedAttention
 * `[ ]` ZeRO: Memory Optimizations Toward Training Trillion Parameter Models
 
 ### Domain 5: Quantization & Parameter-Efficient Fine-Tuning
 * `[✓]` LoRA: Low-Rank Adaptation of Large Language Models
+* `[📝]` Quantization and Training of Neural Networks for Efficient Integer-Arithmetic-Only Inference (Jacob et al.)
 * `[ ]` AdaLoRA: Adaptive Budget Allocation for Parameter-Efficient Fine-Tuning
 * `[ ]` Parameter-Efficient Fine-Tuning Methods: A Critical Review
 * `[ ]` LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale

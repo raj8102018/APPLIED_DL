@@ -198,158 +198,165 @@ papers:
   - id: 26
     title: "Fast Inference from Transformers via Speculative Decoding"
     domain: systems_inference
-    status: planned
+    status: notes_only
     type: implementation
-    folder:
+    folder: "p26_speculative_decoding"
 
   - id: 27
+    title: "Quantization and Training of Neural Networks for Efficient Integer-Arithmetic-Only Inference"
+    domain: quantization_peft
+    status: notes_only
+    type: implementation
+    folder: "p27_quantization_jacob"
+
+  - id: 28
     title: "ZeRO: Memory Optimizations Toward Training Trillion Parameter Models"
     domain: systems_inference
     status: planned
     type: read_only
     folder:
 
-  - id: 28
+  - id: 29
     title: "AdaLoRA: Adaptive Budget Allocation for Parameter-Efficient Fine-Tuning"
     domain: quantization_peft
     status: planned
     type: implementation
     folder:
 
-  - id: 29
+  - id: 30
     title: "Parameter-Efficient Fine-Tuning Methods: A Critical Review"
     domain: quantization_peft
     status: planned
     type: read_only
     folder:
 
-  - id: 30
+  - id: 31
     title: "LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale"
     domain: quantization_peft
     status: planned
     type: implementation
     folder:
 
-  - id: 31
+  - id: 32
     title: "Decoupled Weight Decay Regularization"
     domain: foundations
     status: planned
     type: implementation
     folder:
 
-  - id: 32
+  - id: 33
     title: "GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers"
     domain: quantization_peft
     status: planned
     type: implementation
     folder:
 
-  - id: 33
+  - id: 34
     title: "AWQ: Activation-Aware Weight Quantization for LLMs"
     domain: quantization_peft
     status: planned
     type: implementation
     folder:
 
-  - id: 34
+  - id: 35
     title: "Holistic Evaluation of Language Models"
     domain: generative_philosophy
     status: planned
     type: read_only
     folder:
 
-  - id: 35
+  - id: 36
     title: "Interpretable Machine Learning: Principles & Grand Challenges"
     domain: generative_philosophy
     status: planned
     type: read_only
     folder:
 
-  - id: 36
+  - id: 37
     title: "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale"
     domain: vision_ssl
     status: planned
     type: implementation
     folder:
 
-  - id: 37
+  - id: 38
     title: "A Simple Framework for Contrastive Learning of Visual Representations"
     domain: vision_ssl
     status: planned
     type: implementation
     folder:
 
-  - id: 38
+  - id: 39
     title: "Momentum Contrast for Unsupervised Visual Representation Learning"
     domain: vision_ssl
     status: planned
     type: implementation
     folder:
 
-  - id: 39
+  - id: 40
     title: "Self-Supervised Models are Continual Learners"
     domain: vision_ssl
     status: planned
     type: read_only
     folder:
 
-  - id: 40
+  - id: 41
     title: "Denoising Diffusion Probabilistic Models"
     domain: generative_philosophy
     status: planned
     type: implementation
     folder:
 
-  - id: 41
+  - id: 42
     title: "High-Resolution Image Synthesis with Latent Diffusion Models"
     domain: generative_philosophy
     status: planned
     type: implementation
     folder:
 
-  - id: 42
+  - id: 43
     title: "Proximal Policy Optimization Algorithms"
     domain: reinforcement_learning
     status: implemented
     type: implementation
     folder: "p42_ppo_schulman"
 
-  - id: 43
+  - id: 44
     title: "Soft Actor-Critic: Off-Policy Maximum Entropy Reinforcement Learning"
     domain: reinforcement_learning
     status: planned
     type: implementation
     folder:
 
-  - id: 44
+  - id: 45
     title: "Addressing Function Approximation Error in Actor-Critic Methods"
     domain: reinforcement_learning
     status: planned
     type: implementation
     folder:
 
-  - id: 45
+  - id: 46
     title: "A Survey on Generative Adversarial Networks: Variants & Training"
     domain: generative_philosophy
     status: planned
     type: read_only
     folder:
 
-  - id: 46
+  - id: 47
     title: "Deep Generative Modelling: A Comparative Review"
     domain: generative_philosophy
     status: planned
     type: read_only
     folder:
 
-  - id: 47
+  - id: 48
     title: "BAYPRANOMETA: Bayesian Proto-MAML for Few-Shot Industrial Image Anomaly Detection"
     domain: vision_ssl
     status: planned
     type: implementation
     folder:
 
-  - id: 48
+  - id: 49
     title: "The Bitter Lesson"
     domain: generative_philosophy
     status: planned
