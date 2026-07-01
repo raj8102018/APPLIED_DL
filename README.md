@@ -6,9 +6,9 @@ The objective is to bridge the gap between theoretical understanding and systems
 
 ## 📊 Current Repository Status
 * **Paper Map Total:** 49 Papers
-* **Current Repo Snapshot:** 26 Paper Folders
+* **Current Repo Snapshot:** 27 Paper Folders
 * **PyTorch Implementations:** 19 Folders
-* **Systems/Theory Notes:** 7 Folders
+* **Systems/Theory Notes:** 8 Folders
 
 **Legend:**
 * `[✓]` **Implemented:** Core architecture implemented in PyTorch (`model.py`), verification scripts (`run.py`), and study notes (`notes.pdf`).
@@ -59,9 +59,9 @@ The objective is to bridge the gap between theoretical understanding and systems
 ### Domain 5: Quantization & Parameter-Efficient Fine-Tuning
 * `[✓]` LoRA: Low-Rank Adaptation of Large Language Models
 * `[📝]` Quantization and Training of Neural Networks for Efficient Integer-Arithmetic-Only Inference (Jacob et al.)
+* `[📝]` LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale
 * `[ ]` AdaLoRA: Adaptive Budget Allocation for Parameter-Efficient Fine-Tuning
 * `[ ]` Parameter-Efficient Fine-Tuning Methods: A Critical Review
-* `[ ]` LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale
 * `[ ]` GPTQ: Accurate Post-Training Quantization for GPT
 * `[ ]` AWQ: Activation-Aware Weight Quantization for LLMs
 

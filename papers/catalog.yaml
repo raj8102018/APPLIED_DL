@@ -210,31 +210,31 @@ papers:
     folder: "p27_quantization_jacob"
 
   - id: 28
+    title: "LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale"
+    domain: quantization_peft
+    status: notes_only
+    type: implementation
+    folder: "p28_llmint8_dettmers"
+
+  - id: 29
     title: "ZeRO: Memory Optimizations Toward Training Trillion Parameter Models"
     domain: systems_inference
     status: planned
     type: read_only
     folder:
 
-  - id: 29
+  - id: 30
     title: "AdaLoRA: Adaptive Budget Allocation for Parameter-Efficient Fine-Tuning"
     domain: quantization_peft
     status: planned
     type: implementation
     folder:
 
-  - id: 30
+  - id: 31
     title: "Parameter-Efficient Fine-Tuning Methods: A Critical Review"
     domain: quantization_peft
     status: planned
     type: read_only
-    folder:
-
-  - id: 31
-    title: "LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale"
-    domain: quantization_peft
-    status: planned
-    type: implementation
     folder:
 
   - id: 32
